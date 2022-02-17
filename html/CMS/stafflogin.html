@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+            integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/css/ishacms.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/style1.css">
+        <link rel="stylesheet" href="/css/style2.css">
+
+    </head>
+    
+
+ 
+
+
+
+
+    <body>
+
+        <img class="veggies" style="height: 100vh; width:1700px  ; position: absolute; left: 0px;
+        top: 0px; " src="/images1/veggies.jpg" height alt="Mini Farm">
+      
+      
+        <div class="login">
+          <!-- Showing the title -->
+          <div class="text">Staff Login
+              <!-- input fields for staff to enter  -->
+        <p id="LoginPara">
+            Email: <input type="text" id="email" name="email"><br>
+            Password: <input type="password" id="password" name="password"><br>
+            <button class="custom-button" onclick="login()">Submit</button>
+        </p>
+        <p style="color: red" id="ErrorMessages"></p>
+
+        
+    </div>
+</div>
+</div>
+
+</div>
+
+</body>
+
+
+
+        
+        <script>
+            //Global variables 
+            let loggedInStr = "Logged in <button onclick='logout()'>Logout</button>";
+            let loginStr = document.getElementById("LoginPara").innerHTML;
+            let request = new XMLHttpRequest();
+            
+            //Check login when page loads
+            window.onload = checkLogin;
+            
+            //Checks whether user is logged in.
+            function checkLogin(){
+                //Create event handler that specifies what should happen when server responds
+                request.onload = function(){
+                    if(request.responseText === "ok"){
+                        document.getElementById("LoginPara").innerHTML = loggedInStr;
+                        window.location.href = '/html/CMS/viewproduct.php';
+            
+               
+                    }
+                    else{
+                        console.log(request.responseText);
+                        document.getElementById("LoginPara").innerHTML  = loginStr;
+                        
+
+                    }
+                };
+                //Set up and send request
+                request.open("GET", "check_login.php");
+                request.send();
+            }
+            
+            //Attempts to log in user to server
+            function login(){
+                //Create event handler that specifies what should happen when server responds
+                request.onload = function(){
+                    //Check HTTP status code
+                    if(request.status === 200){
+                        //Get data from server
+                        var responseData = request.responseText;
+             
+                        //Add data to page
+                        if(responseData === "ok"){
+                            document.getElementById("LoginPara").innerHTML = loggedInStr;
+                            document.getElementById("ErrorMessages").innerHTML = "";//Clear error messages
+                            window.location.href = '/html/CMS/home.php';
+
+                        }
+                        else
+                            document.getElementById("ErrorMessages").innerHTML = request.responseText;
+                    }
+                    else
+                        document.getElementById("ErrorMessages").innerHTML = "Error communicating with server";
+                };
+
+                //Extract login data
+                let usrEmail = document.getElementById("email").value;
+                let usrPassword = document.getElementById("password").value;
+                
+                //Set up and send request
+                request.open("POST", "stafflogin.php");
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                request.send("email=" + usrEmail + "&password=" + usrPassword);
+            }
+            
+            //Logs the user out.
+            function logout(){
+                //Create event handler that specifies what should happen when server responds
+                request.onload = function(){
+                    checkLogin();
+                };
+                //Set up and send request
+                request.open("GET", "stafflogout.php");
+                request.send();
+
+                window.location.href = '/html/CMS/home.php';
+            }
+            
+        </script>
+    </body>
+</html>
+
