@@ -1,0 +1,678 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: white;
+}
+
+/* design for header */
+.header {
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  height: 65px;
+  z-index: 10;
+}
+
+
+
+.header a {
+  font-family: helvetica;
+  color: white;
+  line-height: 65px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 2px;
+
+}
+
+/* if cursor goes over nav bar buttton  */
+
+.header a:hover {
+  background-color: grey;
+  color: black;
+  box-shadow: 0px 2px 5px #777777;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* if on a certain page  */
+.header a.active {
+  background-color: #c2fbd7;
+  text-decoration: underline;
+
+  color: green;
+  box-shadow: 0px 2px 5px #777;
+  margin-bottom: 2px;
+  margin-top: 2px;
+
+}
+
+.topnav {
+  display: flex;
+  gap: 10px;
+
+}
+
+/*  right nav buttons in header */
+.topnav-right {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+
+
+
+
+/* header for the table consisting of image product description quantity */
+
+
+.basketHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for details inside the header basket */
+
+.basketHeader div {
+  font-family: Helvetica;
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+/* header for the table consisting of image product description quantity */
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* for details inside the header iin essence the text  */
+
+
+.itemHeader div {
+  width: 640px;
+  font-family: Helvetica;
+  font-weight: 600;
+
+}
+
+/*Spacing to push other headers to the right  */
+
+.invisible {
+  width: 140px;
+
+}
+
+/* header */
+
+
+.productHeader {
+  text-align: left;
+  width: 330px;
+}
+
+/* header */
+
+.quantityHeader {
+  text-align: left;
+
+  width: 140px;
+
+}
+
+.priceHeader {
+  text-align: left;
+  width: 80px;
+
+}
+/* box for the main cart content */
+.basketMain {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+/* customising content inside the main cart */
+.basketMain div {
+  width: 660px;
+  height: 150px;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 4px;
+}
+
+
+/* button style */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 20;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: helvetica;
+  padding: 3.5px 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  border-color: 2px solid black;
+  margin: 5px;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+
+  touch-action: manipulation;
+}
+/* button style */
+.buttonnumber {
+  background-color: #c2fbd7;
+  border-radius: 20;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: helvetica;
+  padding: 3.5px 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  border-color: 2px solid black;
+  margin: 5px;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+}
+
+
+
+/* CSS */
+.checkout {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-36 {
+
+  margin-top: 10px;
+  background-image: linear-gradient(92.88deg, #04AA6D 9.16%, #23a575 43.89%, #39b889 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+}
+
+.button-36:hover {
+  box-shadow: rgba(86, 214, 60, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+.basketImage {
+  width: 140px;
+  height: 150px;
+
+}
+
+.basketProduct {
+  width: 330px;
+
+  text-align: left;
+}
+
+.basketQuantity {
+  width: 160px;
+
+
+}
+
+.basketPrice {
+  width: 85px;
+
+}
+/* styling box for order summary */
+
+.orderSummary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+/* styling fo inside the box summary */
+.orderSummary div {
+  margin-top: 10px;
+  width: 640px;
+  height: 50px;
+  background-color: #c2fbd7;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-align: left;
+  font-size: 20px;
+  font-family: helvetica;
+  font-weight: 600;
+  line-height: 50px;
+
+  padding-top: 5px;
+  padding-left: 20px;
+  border-left: lightgray 1px solid;
+  border-right: lightgray 1px solid;
+  border-top: lightgray 1px solid;
+
+
+}
+/* positioning order content in the centre  */
+.orderContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* stylying inside the order conetnt box */
+.orderContent div {
+  width: 640px;
+  height: 80px;
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-left: lightgray 1px solid;
+  border-right: lightgray 1px solid;
+  border-bottom: lightgray 1px solid;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 20px;
+  line-height: 80px;
+
+}
+
+.orderContent1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderContent1 div {
+  width: 640px;
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-left: lightgray 1px solid;
+  border-right: lightgray 1px solid;
+  border-bottom: lightgray 1px solid;
+  font-family: helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.Text {
+  text-align: end;
+  margin-right: 25px;
+
+}
+/* setting image size for the product  */
+.images {
+  width: auto;
+  max-height: 80%;
+}
+
+
+
+/* footer  */
+
+footer {
+
+  margin-top: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d1b1f;
+  padding: 50px 20px;
+  border-top: 5px solid#4eb060;
+}
+
+
+.footer_container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/* social media logos for the footer  */
+
+.footer_logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_logo a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer_logo a span {
+  color: #4eb060;
+}
+
+.footer_social {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer_social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: 1px solid #ffffff15;
+  font-size: 0.9rem;
+  margin: 0px 5px;
+  transition: all ease 0.3s;
+}
+
+/* going over the footer items with a cursor  */
+
+
+.footer_social a:hover {
+  background-color: blue;
+  transition: all ease 0.3s;
+}
+
+.footer_links strong {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.footer_links ul {
+  margin-top: 10px;
+}
+
+.footer_links ul li a {
+  color: #ffffff;
+  opacity: 0.5;
+  margin: 4px 0px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all ease 0.3s;
+}
+
+.footer_links li a:hover {
+  opacity: 1;
+  transition: all ease 0.3s;
+}
+
+
+
+
+
+/* fruit image sizing margining to space  */
+#fruit {
+  margin: 80px auto;
+}
+
+.fruit_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: 40px 0px;
+}
+
+.fruit_box {
+  width: 100%;
+  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  float: left;
+}
+/* image sixing for footer  */
+.fruit_box img {
+  width: 50%;
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+  flex-direction: column;
+}
+/* text styling for footer  */
+.fruit_box strong {
+  color: #202020;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+/* quantity for the product  */
+.fruit_box .quantity {
+  color: #949494;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* price style for product  */
+.fruit_box .price {
+  color: #393939;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+/* button to add to cart under each image  */
+.fruit_box .cart_button {
+  width: 100%;
+  height: 40px;
+  background-color: #ddd;
+  color: #4eb060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.3s;
+}
+
+.fruit_box .cart_button:hover {
+  background-color: #4eb060;
+  color: #ffffff;
+  transition: all ease 0.3s;
+}
+
+.fruit_box .cart_button:i {
+  margin-right: 10px;
+}
+
+.Grapes_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.Grapes_box {
+  width: 300px;
+  border: 1px solid #eeeeee;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.Grapes_box img {
+  width: 90%;
+  height: 180px;
+  object-fit: contain;
+  object-position: center;
+  margin: auto;
+}
+
+.Grapes_box strong {
+  color: #202020;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.Grapes_box .quantity {
+  color: #949494;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.Grapes_box .price {
+  color: #393939;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.Grapes_box .cart_button {
+  width: 100%;
+  height: 40px;
+  background-color: #ddd;
+  color: #4eb060;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.3s;
+}
+
+.Grapes_description {
+  float: right;
+}
+
+.counter {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn123 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  color: #202020;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: 900;
+  color: #202020;
+  width: 40px;
+  height: 40px;
+}
+
+.prices {
+  height: 100%;
+  text-align: right;
+}
+
+
+
+
+.amount {
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #202020;
+}
+
+
+.text {
+  color: black;
+  font-size: 22px;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  text-decoration: none;
+}
+
+/* cms login page  */
+
+.login {
+  height: 350px;
+  width: 600px;
+  margin-top: 15Vh;
+  margin-left: 60vh;
+  margin-bottom: 20vh;
+  position: absolute;
+  background-color: #d0fadf;
+  border: 2px solid black;
+}
+
+
+
+
+
+/* button used in cms page  */
+
+
+.custom-button {
+  font-size: 20px;
+  font-family: tahoma;
+  border: 2px solid #d0fadf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: black;
+  background-color: greenyellow !important;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.custom-button:hover {
+  color: black;
+  background-color: yellow !important;
+}
